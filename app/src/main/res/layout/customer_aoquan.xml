@@ -6,15 +6,15 @@
     android:gravity="center"
     android:layout_gravity="center"
     android:background="@drawable/aoquan_gridview_background"
-    android:layout_margin="5dp"
     >
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6"
-        android:gravity="center">
+        android:gravity="center"
+        >
         <ImageView
-
             android:layout_gravity="center"
             android:layout_height="120dp"
             android:layout_width="120dp"
@@ -27,12 +27,15 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:text="Name"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:gravity="center">
+        android:gravity="center"
+
+        >
         <TextView
             android:id="@+id/absolutePriceTV"
             android:layout_width="wrap_content"
