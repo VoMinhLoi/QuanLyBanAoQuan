@@ -11,7 +11,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="Địa chỉ"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
@@ -19,34 +18,61 @@
         android:textSize="40dp"
         android:textStyle="bold" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclediachi"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="495dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tenedt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_radius"
+            android:hint="Họ và tên"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="@color/white"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/sdtedt"
+            android:layout_below="@+id/tenedt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border_radius"
+            android:hint="Số điện thoại"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textSize="24dp"/>
+
+        <EditText
+            android:id="@+id/diachiedt"
+            android:layout_below="@+id/sdtedt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border_radius"
+            android:hint="Địa chỉ nhận hàng"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textSize="24dp"/>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp">
-
-        <Button
-            android:id="@+id/themdiachibtn"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#0E7FD8"
-            android:text="Thêm địa chỉ mới"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+        android:layout_height="140dp"
+        android:layout_marginTop="200dp">
 
         <Button
             android:id="@+id/tieptheobtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/themdiachibtn"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
