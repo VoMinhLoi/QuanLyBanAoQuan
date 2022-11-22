@@ -5,11 +5,15 @@
       <map>
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/drawable-v24/border_radius.xml" value="0.1845" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/drawable/aoquan_gridview_background.xml" value="0.1" />
+        <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/drawable/navigation.xml" value="0.189" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/activity_login.xml" value="0.2359375" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/activity_trangchu.xml" value="0.25" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/customer_aoquan.xml" value="0.264" />
         <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/customer_image.xml" value="0.13703703703703704" />
+        <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/customer_nav_header.xml" value="0.25" />
+        <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/layout/drawblelayout_navigation.xml" value="0.1" />
+        <entry key="..\:/QuanLyBanAoQuan/app/src/main/res/menu/navigation.xml" value="0.264" />
       </map>
     </option>
   </component>
