@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#495757"
+    tools:context=".DetailProductFragment"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/img_detail_product_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/img_tee">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_detail_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_detail_product_photo"
+                android:text="Áo JDM Trame Tshirt - Black"
+                android:textSize="30sp"
+                android:textColor="#212121">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_detail_product_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Giá :"
+                android:textSize="20sp"
+                android:textColor="#427cbf"
+                android:layout_below="@+id/tv_detail_product_name">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_detail_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_detail_product_name"
+                android:layout_toRightOf="@+id/tv_detail_product_2"
+                android:layout_marginLeft="10dp"
+                android:text="420.000 Đ"
+                android:textSize="20sp"
+                android:textColor="#427cbf">
+            </TextView>
+
+            <Button
+                android:id="@+id/btn_detail_product_buy"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_detail_product_2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_button_red"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:text="Thêm vào giỏ hàng"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/tv_detail_product_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mô Tả "
+                android:layout_below="@+id/btn_detail_product_buy"
+                android:textSize="30dp"
+                android:textColor="#427cbf">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_detail_product_description"
+                android:layout_below="@+id/tv_detail_product_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Áo thun form rộng TÁo JDM Trame Tshirt - Black là một sản phẩm áo thun basic cao cấp và chất lượng, được cho ra mắt với hai màu trắng và đen kết hợp hoạ tiết logo được in mặt trước và mặt sau tinh tế những không kém phần cá tính."
+                android:textSize="20dp">
+            </TextView>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

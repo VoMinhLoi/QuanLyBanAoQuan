@@ -5,6 +5,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -31,6 +32,8 @@ public class TrangChuActivity extends AppCompatActivity {
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     ImageButton navBT;
+    Button loginBT, signUpBT;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,25 +43,9 @@ public class TrangChuActivity extends AppCompatActivity {
         aoQuanAdapter = new AoQuanAdapter(TrangChuActivity.this, aoQuanList);
         aoQuanGVAX.setAdapter(aoQuanAdapter);
         getImageList();
-        ImageAdapter imageAdapter = new ImageAdapter(imageList);
-        viewPager2.setAdapter(imageAdapter);
-        circleIndicator3.setViewPager(viewPager2);
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                handler.removeCallbacks(runnable);
-                handler.postDelayed(runnable,3000);
-            }
-        });
+        SliderImage();
+        ShowNavigation();
 
-        navigationView.inflateHeaderView(R.layout.customer_nav_header);
-        navBT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
     }
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable runnable = new Runnable() {
@@ -89,6 +76,52 @@ public class TrangChuActivity extends AppCompatActivity {
         imageList.add(new Image(R.drawable.slider2));
         imageList.add(new Image(R.drawable.slider3));
         imageList.add(new Image(R.drawable.slider4));
+    }
+    public void SliderImage(){
+        ImageAdapter imageAdapter = new ImageAdapter(imageList);
+        viewPager2.setAdapter(imageAdapter);
+        circleIndicator3.setViewPager(viewPager2);
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                handler.removeCallbacks(runnable);
+                handler.postDelayed(runnable,3000);
+            }
+        });
+    }
+    public void ShowNavigation(){
+        //        navigationView.inflateHeaderView(R.layout.customer_nav_header);
+        navBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+        navigationView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+        ConvertToLogin();
+
+    }
+    public void ConvertToLogin(){
+        loginBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrangChuActivity.this, LogInActivity.class);
+                startActivity(intent);
+            }
+        });
+        signUpBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrangChuActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     public void AnhXa(){
         aoQuanGVAX = findViewById(R.id.aoQuanGV);

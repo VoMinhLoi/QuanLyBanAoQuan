@@ -56,59 +56,26 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
-            android:id="@+id/btn_nav_login"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/aoquan_gridview_background"
-            android:backgroundTint="@color/primaryColor"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/btn_nav_signup"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="10dp">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Đăng Nhập"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/logInBTTT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="Đăng nhập"
                 android:textColor="@color/white"
-                android:textSize="14dp"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btn_nav_signup"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/aoquan_gridview_background"
-            android:backgroundTint="@android:color/holo_red_dark"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/btn_nav_login"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="10dp">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+            <Button
+                android:id="@+id/signUpBTTT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:text="Đăng ký"
                 android:textColor="@color/white"
-                android:textSize="14dp"
-                android:textStyle="bold"/>
-
+                android:layout_margin="10dp"/>
         </LinearLayout>
 
         <View
